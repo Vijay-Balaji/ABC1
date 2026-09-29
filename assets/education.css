@@ -1,3 +1,51 @@
+/* =========================================================
+   START — MOBILE TAP / BLUE HIGHLIGHT FIX
+   Removes blue background/flash when tapping anywhere
+   ========================================================= */
+
+html,
+body,
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+button,
+a,
+input,
+textarea,
+select,
+label,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+
+/* Remove focus outline caused by mobile tapping */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[role="button"]:focus {
+  outline: none;
+}
+
+/* Keep keyboard accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   END — MOBILE TAP / BLUE HIGHLIGHT FIX
+   ========================================================= */
+
 .edu-hero {
     display: grid;
     grid-template-columns: 1.05fr .95fr;
